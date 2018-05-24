@@ -26,8 +26,8 @@ export default {
     return {
      	username: '渣渣辉',
      	navList: [
-     		{'name': '商户号登记', 'path': '/home'},
-     		{'name': '已登记商户号查询', 'path': '/search'}
+     		{'name': '商户号登记', 'path': '/home/checkIn'},
+     		{'name': '已登记商户号查询', 'path': '/home/search'}
      	],
     }
   },

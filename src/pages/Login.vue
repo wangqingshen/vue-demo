@@ -1,25 +1,26 @@
 <template>
   <div class="login-box">
-    <el-row>
-      <el-col :span="8">
-          <el-input id="name" v-model="name" placeholder="请输入帐号">
-              <template slot="prepend">帐号</template>
-          </el-input> 
-      </el-col>
-     </el-row>
-     <el-row>
-        <el-col :span="8">
-            <el-input id="password" v-model="password" type="password" placeholder="请输入密码">
-                <template slot="prepend">密码</template>
-            </el-input>
+    <form>
+      <el-row>
+        <el-col>
+            <el-input id="name" v-model="name" placeholder="请输入帐号">
+            </el-input> 
         </el-col>
-     </el-row>
-     <el-row>
-        <el-col :span="8">
-            <el-button id="login" v-on:click="check" style="width:100%" type="primary"  @click="openFullScreen"
-            v-loading.fullscreen.lock="fullscreenLoading">登录</el-button>
-        </el-col>
-     </el-row>
+       </el-row>
+       <el-row>
+          <el-col>
+              <el-input id="password" v-model="password" type="password" placeholder="请输入密码">
+              </el-input>
+          </el-col>
+       </el-row>
+       <el-row>
+          <el-col>
+              <el-button id="login" v-on:click="check" style="width:100%" type="primary"  @click="openFullScreen"
+              v-loading.fullscreen.lock="fullscreenLoading">登录</el-button>
+          </el-col>
+       </el-row>
+    </form>
+    
   </div>
 </template>
 
@@ -80,11 +81,15 @@ export default {
 }
 </script>
 
-<style lang="less">
-body {
+<style lang="less" scoped>
+.login-box {
   background: url(../../static/images/bg.jpg) no-repeat 0px 0px;
   background-size: cover;
   margin: 0;
+  height: 100%;
+  form {
+    width: 30%;
+  }
 }
 </style>
 
